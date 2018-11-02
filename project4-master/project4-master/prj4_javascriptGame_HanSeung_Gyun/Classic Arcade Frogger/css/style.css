@@ -1,0 +1,39 @@
+
+body {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+main{
+    display:flex;
+    flex-wrap : wrap;
+}
+
+h1{
+    font-size : 3em;
+    font-weight: 700;
+    color : white;
+    margin-top:40px;
+    margin-left : 50px;
+}
+
+h2{
+    font-size : 2em;
+    font-weight : 700;
+}
+
+h3{
+    font-size : 1.5em;
+    font-weight : 400;
+}
+
+#header_container{
+    height: 150px;
+    background-color : dodgerblue;
+    display : flex;
+    flex-wrap : wrap;
+}
+
+#ScoreBoard{
+    margin : 50px 100px 100px 100px;
+}

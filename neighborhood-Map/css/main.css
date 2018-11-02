@@ -1,0 +1,114 @@
+html, body { height: 100%; margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+
+h2{
+    font-size : 0.7rem;
+    font-weight: 400;
+}
+ul{
+    padding-left : 0;
+    display: block;
+}
+li{
+    min-height : 4vh;
+    list-style-type: none;
+    margin : 10px 0 10px 0;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color : white;
+    color : #252d40;
+
+}
+#container{
+    width : 100%;
+    height : 100%;
+    display : flex;
+    justify-content: flex-end;
+    overflow : hidden;
+
+}
+
+.Museum{
+    font-weight : 700;
+    color : crimson;
+    font-size : 0.9rem;
+}
+
+.Academy{
+    font-weight : 700;
+    color : cornflowerblue;
+    font-size : 0.9rem;
+}
+.Store{
+    font-weight : 700;
+    color : darkcyan;
+    font-size : 0.9rem;
+}
+
+.Restaurant{
+    font-weight : 700;
+    color : cadetblue;
+    font-size : 0.9rem;
+}
+
+#menu{
+    position : fixed;
+    left : -265px;
+    width : 300px;
+    height: 100%;
+    background-color: #252d40;
+    color : white;
+    padding : 0 5px 0 5px;
+}
+
+#header{
+    font-weight: 700;
+
+    display:flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+
+#header>h1{
+    margin : 0;
+    padding : 1rem 0 0.67rem 0;
+    border-bottom: 1px solid white;
+    font-size : 1.2rem;
+    width : 250px;
+}
+
+#header>a{
+    font-family: fontello;
+    font-weight : 400;
+    font-size : 1.4rem;
+    height : 2.1rem;
+    width : 30px;
+    margin:1rem 0 0.67rem 0;
+    cursor:pointer;
+ }
+
+#filter{
+    width : 250px;
+    font-weight: 400;
+    border-bottom: 1px solid white;
+    display:flex;
+    flex-direction : column;
+    padding : 0.5rem 0 0.5rem 0;
+}
+
+#list{
+    width : 250px;
+    max-height : calc(100vh - 12rem);
+    overflow-y : scroll;
+}
+#footer{
+    width : 250px;
+    border-top : 1px solid white;
+}
+
+#map{
+    width : calc(100% - 45px);
+    height: 100%;
+}

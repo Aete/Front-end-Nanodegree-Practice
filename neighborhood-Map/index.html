@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neighborhood Project for Udacity</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="css/font/css/fontello.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <div id="header">
+            <h1>Neighborhood Map Project</h1>
+            <a data-bind="text:menuicon, click : menuClicked"></a>
+        </div>
+
+        <div id="main">
+            <div id="filter">
+                <div id="category">
+                    Choose a Category : &nbsp;
+                    <select data-bind="options : categories,
+                                         optionsCaption : 'Choose...',
+                                         optionsText : 'name',
+                                         value : chosenCategory,
+                                         valueUpdate : 'input'"
+                    ></select>
+                </div>
+                <input class="search_box" placeholder = "Search the places"
+                       data-bind="textInput:searchKeyword, valueUpdate: 'afterkeydown'"
+                       style="margin : 0.8rem 0 0 0;">
+            </div>
+            <div id="list">
+                <ul data-bind="foreach:searchResult">
+                    <li data-bind="text:title, click : $parent.openWindow"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <h2 style ="font-family:fontello; font-size : 1rem; font-weight: 700"> Powered by FourSquare</h2>
+
+        </div>
+    </div>
+    <div id="map"> </div>
+</div>
+<script src = "js/knockout.js"></script>
+<script src = "js/app.js"></script>
+<script src = "js/map_styles.js"></script>
+<script src = "js/def_location.js"></script>
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyBNLrwwL9WMzrtPVZO5290RSbUnqUmK5CM&v=3&callback=startApplication"
+        onerror="mapError()">
+</script>
+</body>
+</html>
